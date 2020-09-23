@@ -3,6 +3,8 @@ import React from 'react'
 // 展示创建好的组件和虚拟Dom
 import ReactDom from 'react-dom'
 
+import Hello from '@/components/Hello'
+
 // 标签 元素，属性，子节点，其他子节点
 // const myh1 = React.createElement('h1',{id:'myh1',title:'this is a title'},'这是个大大的h1')
 // const mydiv = React.createElement('div',null,'这是div 元素',myh1 )
@@ -32,10 +34,9 @@ const namearrs = arrstr.map(
         return item+'~~~'
     }
 )
-// 1 组件
-function Hello(props){
-    return <div>{props.name}----{props.age} </div>
-}
+// 1 组件-function,第一种方式
+// 2 组件class（es6）-第二种方式
+
 
 const dog = {
     name: '大黄',
@@ -52,7 +53,6 @@ ReactDom.render(<div>
 {/* {nameArr} */}
 {/* {namearrs} */}
 {/* {arrstr.map(item => <h3>{item}</h3>)} */}
-
 {/* <Hello name={dog.name} age={dog.age} ></Hello> */}
 <Hello {...dog}></Hello>
 
